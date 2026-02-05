@@ -3,7 +3,8 @@
 a simple node.js login and autherication APIbuilt with expresss and mongoDB.
 what it does 
 
-what  it does
+# features
+
 -register a user
 -login a user
 -Passwords are hashed and bcrypted
