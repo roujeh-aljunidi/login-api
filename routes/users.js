@@ -4,8 +4,13 @@ const User = require("../models/user");
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-    const users = await user.find({}, {password: 0});
+    try {
+
+    const users = await User.find({}, {password: 0});
     res.status(200).json(users);
+    } catch (error) {
+        res.status(500).json({ message: "server error" });
+    }
 });
 
 module.exports = router;
